@@ -10,10 +10,12 @@ namespace Prog2
     {
         static void Main(string[] args)
         {
-            WriteLine("Eurotrans Group by GurritoN(Gurik Nikita) v1.0");
+            
 
             while (true)
             {
+                WriteLine("Eurotrans Group by GurritoN(Gurik Nikita) v1.1");
+                WriteLine("Вес груза: {0}\nРасстояние перевозки: {1}", EuroTrans.Weight, EuroTrans.Distance);
                 WriteLine("Введите 1, чтобы ввести вес груза\nВведите 2, чтобы ввести расстояние перевозки\nВведите 3, чтобы рассчитать параметры заказа\nВведите 0, чтобы выйти из программы");
 
                 int option;
@@ -47,7 +49,9 @@ namespace Prog2
                     }
                     case 3:
                     {
+                        Clear();
                         EuroTrans.Calculate();
+                        ReadKey();
                         break;
                     }
                     case 0:
@@ -60,6 +64,7 @@ namespace Prog2
                         return;
                     }
                 }
+                Clear();
             }
         }
     }

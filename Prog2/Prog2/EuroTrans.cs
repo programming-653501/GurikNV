@@ -29,10 +29,10 @@ namespace Prog2
                 return;
             }
 
-            var numOfCars = (double) Weight / 20;
-            if (!(numOfCars == Math.Truncate(numOfCars)))
+            var numOfCars = Weight / 20;
+            if (!(numOfCars == Math.Truncate((double)numOfCars)))
             {
-                numOfCars = Math.Truncate(numOfCars + 1);
+                numOfCars = (int) Math.Truncate((double) numOfCars + 1);
             }
 
             var cost = numOfCars * 2 * Distance;
