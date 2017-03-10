@@ -38,7 +38,7 @@ namespace Prog2
             var cost = numOfCars * 2 * Distance;
             var insurance = cost * 0.05;
 
-            WriteLine("Количество машин - {0}\nСтоимость страховки - {1}\nСтоимость перевозки - {2}", numOfCars, insurance, cost + insurance);
+            WriteLine("Количество машин - {0}\nСтоимость страховки - {1}\nСтоимость перевозки - {2}\nНажмите любую клавишу для продолжения...", numOfCars, insurance, cost + insurance);
         }
     }
 }
