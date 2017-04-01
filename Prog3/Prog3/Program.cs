@@ -24,13 +24,23 @@ namespace Prog3
             {
                 WriteLine("Введите позицию числа и само число(в одну строку):");
                 string[] IJA = ReadLine().Split(' ');
-                int i = int.Parse(IJA[0]), j = int.Parse(IJA[1]);
+                if (IJA.Length != 3) { WriteLine("Некорректный ввод"); continue;}
+
+                uint i, j;
+                double k;
+
+                if (!uint.TryParse(IJA[0], out i) || i >= n) { WriteLine("Некорректный ввод"); continue; }
+                if (!uint.TryParse(IJA[1], out j) || j >= m) { WriteLine("Некорректный ввод"); continue; }
+                if (!double.TryParse(IJA[1], out k)) { WriteLine("Некорректный ввод"); continue; }
+
                 if (i == 0 && j == 0 && IJA[2] == "0") { break; }
                 if (customArray[i, j] != "*")
                 {
                     WriteLine("Заменить старое значение?(Y/N)");
-                    if (ReadLine() == "N")
+                    if (ReadLine() == "N") { continue;}
+                    if (ReadLine() != "Y")
                     {
+                        WriteLine("Некорректный ввод");
                         continue;
                     }
                 }
