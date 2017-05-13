@@ -15,12 +15,40 @@ namespace Prog7
 
         static Dictionary<string, List<string[]>> GetInput()
         {
+            if (!File.Exists(@"HotelQuest.gcf"))
+            {
+                File.Create(@"HotelQuest.gcf");
+            }
             var ByteHotelQuest = File.ReadAllBytes(@"HotelQuest.gcf");
+            if (!File.Exists(@"TravelWeb.gcf"))
+            {
+                File.Create(@"TravelWeb.gcf");
+            }
             var ByteTravelWeb = File.ReadAllBytes(@"TravelWeb.gcf");
+            if (!File.Exists(@"opodo.gcf"))
+            {
+                File.Create(@"opodo.gcf");
+            }
             var Byteopodo = File.ReadAllBytes(@"opodo.gcf");
+            if (!File.Exists(@"hotels.gcf"))
+            {
+                File.Create(@"hotels.gcf");
+            }
             var Bytehotels = File.ReadAllBytes(@"hotels.gcf");
+            if (!File.Exists(@"orbitz.gcf"))
+            {
+                File.Create(@"orbitz.gcf");
+            }
             var Byteorbitz = File.ReadAllBytes(@"orbitz.gcf");
+            if (!File.Exists(@"AllHotels.gcf"))
+            {
+                File.Create(@"AllHotels.gcf");
+            }
             var ByteAllHotels = File.ReadAllBytes(@"AllHotels.gcf");
+            if (!File.Exists(@"TravelWorm.gcf"))
+            {
+                File.Create(@"TravelWorm.gcf");
+            }
             var ByteTravelWorm = File.ReadAllBytes(@"TravelWorm.gcf");
 
             Encoding encoder = Encoding.Default;
